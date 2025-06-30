@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letícia Alves | Portfolio Excepcional</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Open+Sans:wght@300;400;500;700&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#interests">Interesses</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="hero-section-redesigned">
+            <div class="hero-content-redesigned">
+                <img src="leticia-alves.jpg" alt="Foto de Letícia Alves" class="profile-pic-redesigned">
+                
+                <div class="intro-text-redesigned">
+                    <h1>Letícia Alves</h1>
+                    <p id="animated-text" class="animated-intro"></p>
+                    <p class="tagline-redesigned">"Não há melhor fragata que um livro para nos levar a terras distantes." <span class="author">- Emily Dickinson</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section-redesigned">
+            <div class="section-title-redesigned">
+                <h2>Sobre Mim</h2>
+            </div>
+            <div class="about-content-redesigned">
+                <p>
+                    Olá! Eu sou a Letícia Alves, movida pela curiosidade e pela paixão por criar.
+                    Acredito que a beleza reside na combinação da elegância com um toque de ousadia,
+                    e busco incorporar essa filosofia em tudo o que faço.
+                </p>
+                <p>
+                    Assim como um livro nos transporta para mundos desconhecidos, a tecnologia e a criatividade
+                    são minhas fragatas para explorar novas ideias e construir soluções inovadoras.
+                    Sou uma entusiasta do aprendizado contínuo e adoro desafios que me impulsionam a evoluir.
+                </p>
+                <p>
+                    Navegue pelas minhas paixões e projetos e descubra um pouco mais sobre a minha jornada.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section-redesigned">
+            <div class="section-title-redesigned">
+                <h2>Projetos em Destaque</h2>
+            </div>
+            <div class="project-grid-redesigned">
+                <div class="project-card-redesigned">
+                    <h3>Nome do Projeto 1</h3>
+                    <p>Breve descrição do projeto e o que ele faz.</p>
+                    <a href="https://github.com/LuthorW/nome-do-projeto-1" target="_blank" class="project-link-redesigned">Ver no GitHub <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="project-card-redesigned">
+                    <h3>Nome do Projeto 2</h3>
+                    <p>Descrição do segundo projeto.</p>
+                    <a href="#" target="_blank" class="project-link-redesigned">Saber Mais <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="interests-section-redesigned">
+            <div class="section-title-redesigned">
+                <h2>Meus Interesses</h2>
+            </div>
+            <div class="interests-grid-redesigned">
+                <div class="interest-card-redesigned">
+                    <h3><i class="fas fa-gamepad"></i> Jogos</h3>
+                    <p>Mergulho em narrativas envolventes e desafios estratégicos. Fã de RPGs, aventuras e puzzles. Explorando mundos em **Nome do Jogo 1** e **Nome do Jogo 2**.</p>
+                </div>
+                <div class="interest-card-redesigned">
+                    <h3><i class="fas fa-book-open"></i> Leitura & Romances</h3>
+                    <p>Amores literários e jornadas emocionantes me cativam. Explorando universos em **Nome do Livro 1** e **Nome do Livro 2**.</p>
+                </div>
+                <div class="interest-card-redesigned">
+                    <h3><i class="fas fa-laptop-code"></i> Programação</h3>
+                    <p>A arte de transformar ideias em realidade através do código. Explorando as possibilidades de **Linguagem/Tecnologia 1** e **Linguagem/Tecnologia 2**.</p>
+                </div>
+                <div class="interest-card-redesigned">
+                    <h3><i class="fas fa-futbol"></i> Futebol</h3>
+                    <p>A emoção do jogo, a paixão da torcida. Vibrando com cada lance do **Nome do Time**.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Letícia Alves. Todos os direitos reservados.</p>
+        <div class="social-links">
+            <a href="https://github.com/LuthorW" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/leticia.luthor/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        const texts = [
+            "Olá, sou Letícia.",
+            "Apaixonada por futebol.",
+            "Amante de romances.",
+            "Desenvolvedora."
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        const animatedTextElement = document.getElementById('animated-text');
+        const typingSpeed = 70;
+        const deletingSpeed = 40;
+        const delayBetweenTexts = 1500;
+
+        function type() {
+            if (charIndex < texts[textIndex].length) {
+                animatedTextElement.textContent += texts[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingSpeed);
+            } else {
+                setTimeout(erase, delayBetweenTexts);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                animatedTextElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, deletingSpeed);
+            } else {
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, typingSpeed + 500);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (animatedTextElement) {
+                setTimeout(type, 1000);
+            }
+        });
+
+        const profilePic = document.querySelector('.profile-pic-redesigned');
+        const heroSection = document.getElementById('home');
+        let bubbleInterval;
+
+        function createBubble() {
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+
+            const picRect = profilePic.getBoundingClientRect();
+            const heroRect = heroSection.getBoundingClientRect();
+
+            const picCenterX = picRect.left - heroRect.left + picRect.width / 2;
+            const picCenterY = picRect.top - heroRect.top + picRect.height / 2;
+
+            const size = Math.random() * 30 + 10;
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+
+            const startX = picCenterX + (Math.random() - 0.5) * (picRect.width * 0.7);
+            const startY = picCenterY + (Math.random() - 0.5) * (picRect.height * 0.7);
+
+            bubble.style.left = `${startX}px`;
+            bubble.style.top = `${startY}px`;
+
+            heroSection.appendChild(bubble);
+
+            bubble.addEventListener('animationend', () => {
+                bubble.remove();
+            });
+        }
+
+        profilePic.addEventListener('mouseenter', () => {
+            bubbleInterval = setInterval(createBubble, 100);
+        });
+
+        profilePic.addEventListener('mouseleave', () => {
+            clearInterval(bubbleInterval);
+        });
+    </script>
+</body>
+</html>
