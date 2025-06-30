@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Open+Sans:wght@300;400;500;700&family=Oswald:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Open+Sans:wght@300;400;500;700&family=Oswald:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
     --color-background-light: #e9e9ef;
@@ -149,6 +149,7 @@ a:hover {
     color: #fff;
     position: relative;
     overflow: hidden;
+    perspective: 1000px;
 }
 
 .hero-section-redesigned::before,
@@ -156,32 +157,34 @@ a:hover {
     content: '';
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    animation: pulse 10s infinite ease-in-out alternate;
+    background: rgba(255, 255, 255, 0.08);
+    animation: pulse 12s infinite ease-in-out alternate;
     z-index: 0;
+    filter: blur(10px);
 }
 @keyframes pulse {
-    0% { transform: scale(0.95); opacity: 0.05; }
-    100% { transform: scale(1.05); opacity: 0.1; }
+    0% { transform: scale(0.9); opacity: 0.08; }
+    100% { transform: scale(1.1); opacity: 0.12; }
 }
 .hero-section-redesigned::before {
-    width: 300px;
-    height: 300px;
-    top: -50px;
-    left: -50px;
+    width: 350px;
+    height: 350px;
+    top: -80px;
+    left: -80px;
 }
 .hero-section-redesigned::after {
-    width: 400px;
-    height: 400px;
-    bottom: -80px;
-    right: -80px;
-    animation-delay: 2s;
+    width: 450px;
+    height: 450px;
+    bottom: -100px;
+    right: -100px;
+    animation-delay: 3s;
 }
 
 .hero-content-redesigned {
     max-width: 900px;
     margin: 0 auto;
     z-index: 1;
+    position: relative;
 }
 
 .profile-pic-redesigned {
@@ -197,7 +200,8 @@ a:hover {
 }
 
 .profile-pic-redesigned:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
+    border-color: var(--color-secondary-purple);
 }
 
 .intro-text-redesigned h1 {
@@ -287,7 +291,7 @@ a:hover {
     padding: 2.5em;
     border-radius: 12px;
     box-shadow: 0 6px 20px var(--color-shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     border: 1px solid var(--color-border-subtle);
     text-align: left;
     position: relative;
@@ -317,6 +321,7 @@ a:hover {
 .interest-card-redesigned:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 35px var(--color-shadow-medium);
+    border-color: var(--color-primary-purple);
 }
 
 .project-card-redesigned h3,
@@ -363,6 +368,26 @@ a:hover {
 
 .project-link-redesigned i {
     margin-left: 0.8em;
+}
+
+.more-projects-link {
+    margin-top: 4em;
+    font-size: 1.2em;
+    color: var(--color-text-dark);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.more-projects-link a {
+    color: var(--color-accent-purple);
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-accent-purple);
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.more-projects-link a:hover {
+    color: var(--color-secondary-purple);
+    border-color: var(--color-secondary-purple);
 }
 
 .footer {
@@ -467,6 +492,10 @@ a:hover {
         padding: 0.7em 1.2em;
         font-size: 0.9em;
     }
+    .more-projects-link {
+        font-size: 1em;
+        padding-top: 2.5em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -521,5 +550,9 @@ a:hover {
     .social-links a {
         font-size: 1.5em;
         margin: 0 0.5em;
+    }
+    .more-projects-link {
+        font-size: 0.9em;
+        padding-top: 2em;
     }
 }
